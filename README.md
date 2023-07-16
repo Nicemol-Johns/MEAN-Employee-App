@@ -5,7 +5,7 @@ INSTRUCTIONS:
 2) Open in VS code.
 3) Navigate to backendCode folder ['cd backendCode']
 4) Run 'npm install'
-5) Create a .env file and initialize with 'CONNECTION_STRING=<mongoDB-atlas-connection-string>'
+5) Create a .env file and initialize with 'CONNECTION_STRING=mongoDB-atlas-connection-string'
 6) Run 'nodemon app.js'
 7) In another terminal navigate to frontend folder ['cd frontend']
 8) Run 'npm install'
