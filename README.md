@@ -12,4 +12,12 @@ INSTRUCTIONS:
 9) ng serve
 
     Node Server is running on PORT:3000
+
+   ADMIN LOGIN CREDENTIALS:
+   Email   : admin@org.in
+   Password: admin123
+
+   USER LOGIN CREDENTIALS:
+   Email   : user@org.in
+   Password: user1234
    
