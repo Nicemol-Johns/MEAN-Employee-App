@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/homeAdmin/home.component';
 import { logincomponent } from './pages/login/logincomponent';
 import { EmployeeformComponent } from './pages/employeeform/employeeform.component';
-import { ListComponent } from './components/list/list.component';
+//import { ListComponent } from './components/list/list.component';
 import { AddformComponent } from './pages/addform/addform.component';
 import { EditformComponent } from './pages/editform/editform.component';
 import { UserHomeComponent } from './pages/user-home/user-home.component';

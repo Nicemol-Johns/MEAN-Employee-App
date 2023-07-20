@@ -22,26 +22,13 @@ app.use('/api',api);
 
 const path = require('path');
 app.use(express.static('./dist/frontend'));
-app.get('/*', function(req, res) {
-        res.sendFile(path.join(__dirname +
-        '/dist//frontend/index.html'));});
 
-        require("dotenv").config();                                                   
-        const ConnectionString = process.env.CONNECTION_STRING; 
-               
+ 
+app.use(express.static(path.join(__dirname,'frontend')))
 
-        const connectDB = async () => {
-                try {
-                  const conn = await mongoose.connect(ConnectionString);
-                  console.log(`MongoDB Connected: ${conn.connection.host}`);
-                } catch (error) {
-                  console.log(error);
-                  process.exit(1);
-                }
-              }        
+app.get('*', async(req, res)=> {
+        res.sendFile(path.join(__dirname ,'frontend','index.html'))});
 
-connectDB().then(() => {
-        app.listen(PORT, () => {
-            console.log(`Server is running on ${PORT}`);
-        })
-    })
+app.listen(PORT, () => {
+        console.log(`Server is running on ${PORT}`);
+})

@@ -7,10 +7,10 @@ import { HomeComponent } from './pages/homeAdmin/home.component';
 import { logincomponent } from './pages/login/logincomponent';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ListComponent } from './components/list/list.component';
+//import { ListComponent } from './components/list/list.component';
 
 import { HTTP_INTERCEPTORS, HttpClient,HttpEvent,HttpHandler, HttpClientModule} from '@angular/common/http'
-import { GetemployeedataService } from './getemployeedata.service';
+//import { GetemployeedataService } from './getemployeedata.service';
 
 import { FormsModule } from '@angular/forms';
 import { EmployeeformComponent } from './pages/employeeform/employeeform.component';
@@ -30,7 +30,7 @@ import { AuthguardserviceService } from './authguardservice.service';
     logincomponent,
     HeaderComponent,
     FooterComponent,
-    ListComponent,
+    //ListComponent,
     EmployeeformComponent,
     AddformComponent,
     UserHomeComponent,
@@ -43,7 +43,7 @@ import { AuthguardserviceService } from './authguardservice.service';
     FormsModule
     
   ],
-  providers: [GetemployeedataService,
+  providers: [//GetemployeedataService,
               AuthService,
               BackendAPIService,
               AuthguardserviceService,

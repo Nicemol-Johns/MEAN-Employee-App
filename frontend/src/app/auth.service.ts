@@ -10,6 +10,6 @@ export class AuthService {
   constructor(private http:HttpClient) { }
 
   loginuser(user:any){
-    return this.http.post<any>("http://localhost:3000/api/authlogin",user);
+    return this.http.post<any>(`https://localhost:3000/api/authlogin`,user);
   }
 }
