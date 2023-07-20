@@ -5,13 +5,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
+  [x: string]: any;
 
   constructor(private http:HttpClient) { }
 
   loginuser(user:any){
     return this.http.post<any>("http://localhost:3000/api/authlogin",user);
-  }
-  isLoginTrue(){
-    return localStorage.getItem('token');
   }
 }

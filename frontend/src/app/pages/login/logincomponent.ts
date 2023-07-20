@@ -22,8 +22,10 @@ export class logincomponent {
     //  console.log(res.api);
      // console.log(res.token)
       localStorage.setItem('token',res.token);
+      localStorage.setItem('role',res.role);
+      console.log(res.role)
       this.router.navigate([res.api]);
-  
+      
   })
   }
 

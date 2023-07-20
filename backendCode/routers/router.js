@@ -24,7 +24,7 @@ function verifytoken(req, res, next) {
       res.status(401).send('Error');
     }
   }
-  
+
 
 router.post("/addemployee",verifytoken,async (req,res)=>{                              
     try{
@@ -89,16 +89,16 @@ router.delete("/deleteform/:id",verifytoken,async (req,res)=>{
 
 router.post('/authlogin', (req,res)=>{
     try {
-     //   console.log(req.headers.authorization)
+      console.log(req.headers.authorization)
         var email = req.body.email;
         var pwd = req.body.password;
         let payload = {email:email,password:pwd}
         console.log(payload )
         let token = jwt.sign(payload,'secretKey');
         if(email==='admin@org.in' && pwd==='admin123'){
-            res.status(200).send({message:'Admin logged in Successful',token:token,api:'/home'})
+            res.status(200).send({message:'Admin logged in Successful',token:token,api:'/home',role:'admin'})
         }else if(email==='user@org.in' && pwd=='user1234'){
-            res.status(200).send({message:'User logged in Successfully',token:token,api:'/user'})
+            res.status(200).send({message:'User logged in Successfully',token:token,api:'/user',role:'user'})
         }
     } catch (error) {
         res.status(404).send({message:"Fatal Error"})        

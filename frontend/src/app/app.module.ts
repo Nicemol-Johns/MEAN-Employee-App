@@ -20,6 +20,8 @@ import { UserHomeComponent } from './pages/user-home/user-home.component';
 import { BackendAPIService } from './backend-api.service';
 import { EditformComponent } from './pages/editform/editform.component';
 import { TokeninterceptorService } from './tokeninterceptor.service';
+import { AuthguardserviceService } from './authguardservice.service';
+//import { authGuardGuard } from './auth-guard.guard';
 
 @NgModule({
   declarations: [
@@ -39,15 +41,17 @@ import { TokeninterceptorService } from './tokeninterceptor.service';
     AppRoutingModule,
     HttpClientModule,
     FormsModule
+    
   ],
   providers: [GetemployeedataService,
               AuthService,
               BackendAPIService,
+              AuthguardserviceService,
             {
               provide:HTTP_INTERCEPTORS,
               useClass:TokeninterceptorService,
               multi:true
-            }
+            },
           ],
   bootstrap: [AppComponent]
 })
